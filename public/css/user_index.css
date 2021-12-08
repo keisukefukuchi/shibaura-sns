@@ -1,0 +1,76 @@
+.section-title {
+    font-size: 24px;
+}
+
+.user-list {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.user-list_card {
+    margin-bottom: 6px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid rgb(114, 114, 114);
+    border-radius: 4px;
+}
+.user-list_card:hover {
+    background-color: rgb(250, 246, 240);
+}
+
+.user-list_card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-list_card-wrapper:hover {
+    text-decoration: none;
+}
+
+.user-list_profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-list_profile-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-list_profile-text {
+    padding-left: 20px;
+}
+
+.user-list_profile-text .user-name {
+    margin-bottom: 6px;
+    color: #000;
+}
+
+.user-list_profile-text .screen-name {
+    margin-bottom: 0;
+    color: gray;
+}
+
+
+.follow-btn {
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    background-color: rgb(2, 185, 185);
+    box-shadow: 2px 2px 2px gray;
+}
+.follow-btn:hover {
+    opacity: .6;
+    transition: .3s;
+}
+.follow-btn.cancel {
+    background-color: #fff;
+    color: rgb(2, 185, 185);
+    border: 1px solid rgb(2, 185, 185);
+}
+

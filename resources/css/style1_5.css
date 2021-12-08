@@ -1,0 +1,95 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color: #f8fafc;
+}
+
+.hidden{
+    display:none;
+}
+
+li{
+list-style:none;
+}
+
+.header-logo{
+   /* font-size:25px;*/
+    color:white;
+    float:left;
+    background-color:dimgray;
+    padding:25px 0px;
+    width:15%;
+}
+.header-logo:hover{
+    background-color:darkslateblue;
+}
+
+.header-list li{
+float: right;
+background-color:darkgrey;
+padding:25px 0px;
+width:85%;
+}
+
+.post{
+    font-size:20px;
+    padding-left:20%;
+    padding-top:60px;
+}
+
+.border{
+    margin-left:auto;
+    margin-right:auto;
+   border-bottom:2px solid darkgrey;
+    width:60%;
+}
+
+.textarea{
+    font-family:"MSゴシック";
+    margin-top:10px;
+    margin-left:20%;
+    padding:10px;
+    width:58%;
+    resize:none;
+}
+
+.button{
+    text-align:center;
+}
+.button input{
+    padding:5px 50px;
+    margin-top:50px;
+    border-radius:100vh;
+    color:white;
+    background-color:black ;
+}
+
+.button input:hover{
+    background-color:darkslateblue;
+}
+
+input[type="file"] {
+    padding-left:20% ;
+    /*display: none;*/
+}
+
+/*label {
+
+    color: white;
+    background-color: dimgray;
+    border-radius:100vh;
+    padding:0px 10px;
+    margin-left:20%;
+    cursor: pointer;
+}
+*/
+p{
+    padding-left:20%;
+}
+
+.position{
+    margin-left:20%;
+}
