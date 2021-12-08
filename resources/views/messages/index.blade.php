@@ -1,3 +1,4 @@
+{{-- メイン画面 --}}
 @extends('layouts.app')
 <style>
     .name {
