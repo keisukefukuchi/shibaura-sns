@@ -15,6 +15,7 @@ class ChannelsTableSeeder extends Seeder
     public function run()
     {
         Channel::create([
+            'id' => 1,
             'channel_name' => 'main',
         ]);
     }
