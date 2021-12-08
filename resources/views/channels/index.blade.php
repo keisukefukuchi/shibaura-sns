@@ -1,4 +1,3 @@
-{{-- チャンネル参加画面 --}}
 @extends('layouts.app')
 
 @section('add_css')

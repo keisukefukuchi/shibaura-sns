@@ -8,21 +8,9 @@ use App\Models\Message;
 use App\Models\Channel;
 use App\Models\Join;
 
-/**
- * Designer : 寺田
- * Date     : 2021/06/21
- * Purpose  : C3 チャット処理
- */
 
 class MessagesController extends Controller
 {
-     /**
-	 * Function Name	: index
-	 * Designer			: 寺田
-	 * Date				: 2021/06/21
-	 * Function			: メイン画面を表示する
-	 * Return			: メイン画面
-	 */
     public function index(Request $request, Message $message)
     {
         $user = auth()->user();
@@ -46,13 +34,6 @@ class MessagesController extends Controller
         ]);
     }
 
-    /**
-    * Function Name	    : create
-    * Designer			: 寺田
-    * Date				: 2021/06/21
-    * Function			: 投稿画面を表示する
-    * Return			: 投稿画面
-    */
     public function create($channel_id)
     {
         $user = auth()->user();
@@ -69,13 +50,6 @@ class MessagesController extends Controller
         ]);
     }
 
-    /**
-	 * Function Name	: store
-	 * Designer			: 寺田
-	 * Date				: 2021/06/21
-	 * Function			: MessageテーブルをDBに保存する
-	 * Return			: メイン画面
-	 */
     public function store(Request $request, Message $message)
     {
         $user = auth()->user();
@@ -89,13 +63,6 @@ class MessagesController extends Controller
         return redirect('messages');
     }
 
-    /**
-	 * Function Name	: show
-	 * Designer			: 寺田
-	 * Date				: 2021/06/21
-	 * Function			: チャット詳細画面を表示する
-	 * Return			: チャット詳細画面
-	 */
     public function show(Message $message)
     {
         $user = auth()->user();
@@ -108,14 +75,6 @@ class MessagesController extends Controller
             'replies' => $reply,
         ]);
     }
-
-    /**
-	 * Function Name	: edit
-	 * Designer			: 寺田
-	 * Date				: 2021/06/21
-	 * Function			: 編集するための投稿画面を表示する
-	 * Return			: 投稿画面
-	 */
     public function edit(Message $message)
     {
         $user = auth()->user();
@@ -134,14 +93,6 @@ class MessagesController extends Controller
             'param'         => 1,
         ]);
     }
-
-    /**
-	 * Function Name	: update
-	 * Designer			: 寺田
-	 * Date				: 2021/06/21
-	 * Function			: メッセージ編集処理を行う
-	 * Return			: メイン画面
-	 */
     public function update(Request $request, Message $message)
     {
         $data = $request->all();
@@ -154,13 +105,6 @@ class MessagesController extends Controller
         return redirect('messages');
     }
 
-    /**
-	 * Function Name	: destroy
-	 * Designer			: 寺田
-	 * Date				: 2021/06/21
-	 * Function			: メッセージ削除処理を行う
-	 * Return			: メイン画面
-	 */
     public function destroy(Message $message)
     {
         $user = auth()->user();
@@ -169,13 +113,6 @@ class MessagesController extends Controller
         return redirect('messages');
     }
 
-    /**
-	 * Function Name	: reply
-	 * Designer			: 寺田
-	 * Date				: 2021/06/21
-	 * Function			: 返信するための投稿画面を表示する
-	 * Return			: 投稿画面
-	 */
     public function reply($message_id)
     {
         $user = auth()->user();
@@ -192,13 +129,6 @@ class MessagesController extends Controller
         ]);
     }
 
-    /**
-	 * Function Name	: replyStore
-	 * Designer			: 寺田
-	 * Date				: 2021/06/21
-	 * Function			: MessageテーブルをDBに保存する
-	 * Return			: メイン画面
-	 */
     public function replyStore(Request $request)
     {
         $user = auth()->user();

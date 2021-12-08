@@ -1,4 +1,3 @@
-{{-- ユーザ詳細画面 --}}
 @extends('layouts.app')
 
 @section('add_css')

@@ -1,4 +1,3 @@
-{{-- 検索画面 --}}
 @extends('layouts.app')
 <style>
     .position {

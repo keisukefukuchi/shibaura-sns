@@ -16,11 +16,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Join;
 use Illuminate\Support\Carbon;
 
-/**
- * Designer : 畑
- * Date     : 2021/06/14
- * Purpose  : C2-2 登録処理
- */
+
 
 class RegisterController extends Controller
 {
@@ -34,13 +30,6 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    /**
-     * Function Name : studentNumberVerification
-     * Designer      : 畑
-     * Date          : 2021/06/14
-     * Function      : 仮登録処理を行う
-     * Return        : 仮登録完了メニュー
-     */
     public function studentNumberVerification(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -59,13 +48,6 @@ class RegisterController extends Controller
         }
     }
 
-    /**
-     * Function Name : studentNumberVerifyComplete
-     * Designer      : 畑
-     * Date          : 2021/06/14
-     * Function      : 本登録画面を表示する
-     * Return        : 本登録画面
-     */
     public function studentNumberVerifyComplete($token)
     {
         $student_number_verification = PreUser::findByToken($token);
@@ -84,13 +66,6 @@ class RegisterController extends Controller
 
     }
 
-    /**
-     * Function Name : create
-     * Designer      : 畑
-     * Date          : 2021/06/14
-     * Function      : 本登録を行う
-     * Return        : メイン画面
-     */
     protected function create(Request $request)
     {
         $validator = Validator::make($request->all(), [

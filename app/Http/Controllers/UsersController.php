@@ -9,22 +9,12 @@ use App\Models\User;
 use App\Models\Message;
 use App\Models\Join;
 
-/**
- * Designer : 畑
- * Date     : 2021/06/14
- * Purpose  : C2-3 利用者処理
- */
+
 
 class UsersController extends Controller
 {
 
-    /**
-     * Function Name : index
-     * Designer      : 畑
-     * Date          : 2021/06/14
-     * Function      : 利用者一覧画面を表示する
-     * Return        : 利用者一覧画面
-     */
+
     public function index()
     {
         $users = User::getAllUsers(auth()->user()->id);
@@ -33,13 +23,7 @@ class UsersController extends Controller
         ]);
     }
 
-    /**
-     * Function Name : show
-     * Designer      : 畑
-     * Date          : 2021/06/14
-     * Function      : プロフィール画面を表示する
-     * Return        : プロフィール画面
-     */
+
     public function show(User $user)
     {
         $join_channels = Join::joinChannelIds(auth()->user()->id);
@@ -52,5 +36,4 @@ class UsersController extends Controller
             'message_count' => $message_count,
         ]);
     }
-
 }

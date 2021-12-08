@@ -1,4 +1,3 @@
-{{-- チャット詳細画面 --}}
 @extends('layouts.app')
 <style>
     .name {
