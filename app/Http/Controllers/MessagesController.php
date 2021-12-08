@@ -15,7 +15,7 @@ class MessagesController extends Controller
     {
         $user = auth()->user();
         $channel_id = $request->input('channel_id');
-        if (empty($channel_id)){
+        if (empty($channel_id)) {
             $channel_id = 1;
         }
         $timelines = $message->getTimelines($channel_id);
@@ -142,5 +142,4 @@ class MessagesController extends Controller
 
         return redirect('messages');
     }
-
 }
