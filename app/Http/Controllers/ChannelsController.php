@@ -12,7 +12,6 @@ use App\Models\Join;
 class ChannelsController extends Controller
 {
 
-
     public function index()
     {
         $user = auth()->user();
@@ -27,16 +26,13 @@ class ChannelsController extends Controller
         ]);
     }
 
-
     public function create()
     {
         return view('channels.create');
     }
 
-
     public function store(Request $request)
     {
-
         $validator = Validator::make($request->all(), [
             'channel_name' => 'required|string|max:20|unique:channels,channel_name',
         ]);
@@ -56,7 +52,6 @@ class ChannelsController extends Controller
         ]);
     }
 
-
     public function join(Request $request)
     {
         $user = auth()->user();
@@ -70,7 +65,6 @@ class ChannelsController extends Controller
 
         return back();
     }
-
 
     public function leave(Request $request)
     {

@@ -14,8 +14,6 @@ class Join extends Model
     ];
 
     public $timestamps = false;
-
-
     public static function join(Int $user_id, Int $channel_id){
         $join = new self([
             'user_id'    => $user_id,
@@ -24,8 +22,6 @@ class Join extends Model
         $join->save();
         return $join;
     }
-
-
     public static function leave(Int $user_id, Int $channel_id){
         $join = self::where('user_id', $user_id)->where('channel_id', $channel_id)->first();
         $join->delete();
@@ -37,7 +33,7 @@ class Join extends Model
         return $channel_ids;
     }
 
-   
+
     public static function isJoin(Int $user_id, Int $channel_id){
         $is_join = (boolean) self::where('user_id', $user_id)->where('channel_id', $channel_id)->first();
         return $is_join;

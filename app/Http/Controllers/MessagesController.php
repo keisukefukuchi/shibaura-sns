@@ -11,11 +11,12 @@ use App\Models\Join;
 
 class MessagesController extends Controller
 {
+
     public function index(Request $request, Message $message)
     {
         $user = auth()->user();
         $channel_id = $request->input('channel_id');
-        if (empty($channel_id)) {
+        if (empty($channel_id)){
             $channel_id = 1;
         }
         $timelines = $message->getTimelines($channel_id);
@@ -75,6 +76,7 @@ class MessagesController extends Controller
             'replies' => $reply,
         ]);
     }
+
     public function edit(Message $message)
     {
         $user = auth()->user();
@@ -93,6 +95,7 @@ class MessagesController extends Controller
             'param'         => 1,
         ]);
     }
+
     public function update(Request $request, Message $message)
     {
         $data = $request->all();
@@ -142,4 +145,5 @@ class MessagesController extends Controller
 
         return redirect('messages');
     }
+
 }

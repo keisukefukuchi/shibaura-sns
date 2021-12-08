@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 
+
 class Channel extends Model
 {
     protected $fillable = [
         'channel_name',
     ];
-
 
     public static function store($channel_name)
     {
@@ -27,7 +27,6 @@ class Channel extends Model
         return $joined_channels;
     }
 
-    
     public static function getChannels()
     {
         $channels = self::where('id' , '!=', 1)->simplePaginate(50);
